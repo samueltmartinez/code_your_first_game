@@ -34,8 +34,14 @@ function drawEverything(){
     canvasContext.fillRect(0, 0, canvas.width, canvas.height);
     canvasContext.fillStyle = 'white';
     canvasContext.fillRect(0, 250, 10, 100);    
-    canvasContext.fillStyle = 'red';
-    canvasContext.fillRect(ballX, 200, 10, 10);    
+    colorCircle(ballX, 150, 10, 'white');
+}
+
+function colorCircle(centerX, centerY, radius, drawColor){
+    canvasContext.fillStyle = drawColor;
+    canvasContext.beginPath();
+    canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
+    canvasContext.fill()
 }
 
 </script>
